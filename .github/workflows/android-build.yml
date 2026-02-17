@@ -1,0 +1,26 @@
+name: Android Build
+
+on:
+  push:
+    branches: [ main ]  # keď niekto pushne do hlavnej vetvy
+  pull_request:
+    branches: [ main ]  # keď niekto otvorí PR
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v3  # stiahne tvoj kód
+
+      - name: Set up JDK
+        uses: actions/setup-java@v3
+        with:
+          distribution: 'temurin'
+          java-version: '17'  # JDK potrebné na Android build
+
+      - name: Build APK
+        run: ./gradlew assembleDebug  # spustí build APK
+
+      - name: Run tests
+        run: ./gradlew test  # spustí testy
