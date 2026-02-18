@@ -2,23 +2,26 @@
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:orientation="vertical">
+    android:orientation="vertical"
+    android:padding="12dp">
 
     <TextView
-        android:id="@+id/hintText"
+        android:id="@+id/emptyText"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:padding="12dp" />
+        android:text="@string/inventory_empty" />
 
-    <FrameLayout
-        android:id="@+id/arFragmentContainer"
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/recyclerView"
         android:layout_width="match_parent"
         android:layout_height="0dp"
-        android:layout_weight="1" />
+        android:layout_weight="1"
+        android:layout_marginTop="8dp" />
 
     <Button
-        android:id="@+id/toInventoryButton"
+        android:id="@+id/toQuizButton"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="@string/open_inventory" />
+        android:text="@string/open_quiz" />
+
 </LinearLayout>
