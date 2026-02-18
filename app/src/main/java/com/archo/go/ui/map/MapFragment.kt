@@ -22,10 +22,42 @@ class MapFragment : Fragment(R.layout.fragment_map), OnMapReadyCallback {
     private lateinit var map: GoogleMap
 
     private val sitePoints = listOf(
-        ArchaeologicalSite("Keltské hradisko Devín", 48.1738, 16.9784),
-        ArchaeologicalSite("Gerulata Rusovce", 48.0346, 17.1560),
-        ArchaeologicalSite("Múzeum mesta Bratislavy", 48.1425, 17.1081),
-        ArchaeologicalSite("Slovenské národné múzeum", 48.1416, 17.1009)
+        ArchaeologicalSite(
+            name = "Pustý hrad",
+            description = "Rozsiahla zrúcanina hradu nad Zvolenom s nálezmi z obdobia stredoveku.",
+            lat = 48.5795,
+            lng = 19.1462
+        ),
+        ArchaeologicalSite(
+            name = "Stará radnica Zvolen",
+            description = "Historická mestská lokalita s archeologickými stopami stredovekého osídlenia.",
+            lat = 48.5764,
+            lng = 19.1256
+        ),
+        ArchaeologicalSite(
+            name = "Rímskokatolícky kostol Dobrá Niva",
+            description = "Sakrálny objekt s historickými vrstvami osídlenia a regionálnymi artefaktmi.",
+            lat = 48.3982,
+            lng = 19.1103
+        ),
+        ArchaeologicalSite(
+            name = "Petuša",
+            description = "Archeologicky významné hradisko pri sútoku Hrona a Slatiny.",
+            lat = 48.5751,
+            lng = 19.1805
+        ),
+        ArchaeologicalSite(
+            name = "Šášov",
+            description = "Hradná lokalita so stopami fortifikácie a nálezmi z neskorého stredoveku.",
+            lat = 48.5454,
+            lng = 18.8407
+        ),
+        ArchaeologicalSite(
+            name = "Revište",
+            description = "Zrúcanina hradu Revište s výhľadom na Hron a bohatou historickou stratigrafiou.",
+            lat = 48.4639,
+            lng = 18.9182
+        )
     )
 
     private val locationPermissionLauncher = registerForActivityResult(
@@ -57,6 +89,7 @@ class MapFragment : Fragment(R.layout.fragment_map), OnMapReadyCallback {
                 MarkerOptions()
                     .position(LatLng(site.lat, site.lng))
                     .title(site.name)
+                    .snippet(site.description)
             )?.tag = site
         }
 
@@ -82,9 +115,9 @@ class MapFragment : Fragment(R.layout.fragment_map), OnMapReadyCallback {
             val target = if (location != null) {
                 LatLng(location.latitude, location.longitude)
             } else {
-                LatLng(48.1486, 17.1077) // fallback Bratislava
+                LatLng(48.5764, 19.1256) // fallback Zvolen
             }
-            map.animateCamera(CameraUpdateFactory.newLatLngZoom(target, 12f))
+            map.animateCamera(CameraUpdateFactory.newLatLngZoom(target, 11f))
         }
     }
 
