@@ -16,6 +16,7 @@
     <string name="quiz_no_data">Najprv získaj artefakty v AR skeneri.</string>
     <string name="quiz_progress">Otázka %1$d/%2$d</string>
     <string name="submit_answer">Potvrdiť odpoveď</string>
+    <string name="select_answer_first">Najprv vyber odpoveď.</string>
     <string name="quiz_result_format">Úspešnosť: %1$d%% | Body za kvíz: %2$d</string>
 
     <string name="points_value">Aktuálne body: %1$d</string>

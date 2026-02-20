@@ -17,6 +17,7 @@ import com.archo.go.notifications.NearbyNotificationHelper
 class MainActivity : AppCompatActivity() {
 
     private lateinit var binding: ActivityMainBinding
+    private lateinit var navHost: NavHostFragment
 
     private val notificationPermissionLauncher = registerForActivityResult(
         ActivityResultContracts.RequestPermission()
@@ -30,7 +31,7 @@ class MainActivity : AppCompatActivity() {
         setSupportActionBar(binding.toolbar)
         supportActionBar?.title = getString(R.string.app_name)
 
-        val navHost = supportFragmentManager.findFragmentById(R.id.navHostFragment) as NavHostFragment
+        navHost = supportFragmentManager.findFragmentById(R.id.navHostFragment) as NavHostFragment
         setupActionBarWithNavController(navHost.navController)
 
         NearbyNotificationHelper.createChannel(this)
@@ -55,6 +56,9 @@ class MainActivity : AppCompatActivity() {
             else -> super.onOptionsItemSelected(item)
         }
     }
+
+    override fun onSupportNavigateUp(): Boolean =
+        navHost.navController.navigateUp() || super.onSupportNavigateUp()
 
     private fun requestNotificationPermissionIfNeeded() {
         if (android.os.Build.VERSION.SDK_INT < android.os.Build.VERSION_CODES.TIRAMISU) return
