@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="16dp">
+
+    <TextView
+        android:id="@+id/progress"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+
+    <TextView
+        android:id="@+id/question"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:textStyle="bold" />
+
+    <RadioGroup
+        android:id="@+id/answersGroup"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="12dp">
+
+        <RadioButton android:id="@+id/answerA" android:layout_width="match_parent" android:layout_height="wrap_content" />
+        <RadioButton android:id="@+id/answerB" android:layout_width="match_parent" android:layout_height="wrap_content" />
+        <RadioButton android:id="@+id/answerC" android:layout_width="match_parent" android:layout_height="wrap_content" />
+        <RadioButton android:id="@+id/answerD" android:layout_width="match_parent" android:layout_height="wrap_content" />
+    </RadioGroup>
+
+    <Button
+        android:id="@+id/submitButton"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:text="@string/submit_answer" />
+
+</LinearLayout>
