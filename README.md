@@ -35,3 +35,16 @@ ARcho.go je modulárny Android projekt v Kotlin postavený na Fragmentoch a Navi
 ## Poznámky
 - AR funkcie vyžadujú ARCore kompatibilné zariadenie.
 - Pre Android 13+ povoľ notifikácie, inak sa proximity upozornenia nezobrazia.
+
+
+## Riešenie chyby Sceneform dependency
+Ak vidíš chybu typu:
+`Could not find com.gorisse.thomas.sceneform:sceneform-ux:1.23.0`,
+postup je:
+1. Skontroluj, že v `app/build.gradle.kts` je závislosť
+   `com.google.ar.sceneform.ux:sceneform-ux:1.17.1`.
+2. V Android Studio daj **File > Invalidate Caches / Restart**.
+3. Vymaž lokálny build cache projektu:
+   - zmaž `.gradle/` v root projekte
+   - spusti `./gradlew --refresh-dependencies clean`
+4. Urob nový Gradle Sync.

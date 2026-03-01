@@ -40,6 +40,12 @@ android {
     }
 }
 
+
+configurations.all {
+    // Guard against stale references from older local caches/build scripts.
+    exclude(group = "com.gorisse.thomas.sceneform")
+}
+
 dependencies {
     implementation("androidx.core:core-ktx:1.13.1")
     implementation("androidx.appcompat:appcompat:1.7.0")
