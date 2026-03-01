@@ -1,0 +1,36 @@
+<resources>
+    <string name="app_name">ARcho.go</string>
+    <string name="menu_info">Mapa → Detail → AR skener → Inventár → Kvíz → Odmeny.</string>
+    <string name="detail_coords">GPS: %1$.5f, %2$.5f</string>
+    <string name="unknown_site">Neznáma lokalita</string>
+    <string name="no_description">Popis nie je dostupný.</string>
+
+    <string name="start_ar_search">Spusti AR hľadanie artefaktov</string>
+    <string name="open_inventory">Otvoriť inventár</string>
+    <string name="ar_instruction">Ťukni na horizontálnu plochu a potom na 3D objekt pre získanie artefaktu.</string>
+    <string name="artefact_collected">Artefakt získaný!</string>
+
+    <string name="inventory_empty">Inventár je zatiaľ prázdny.</string>
+    <string name="open_quiz">Spusti kvíz</string>
+
+    <string name="quiz_no_data">Najprv získaj artefakty v AR skeneri.</string>
+    <string name="quiz_progress">Otázka %1$d/%2$d</string>
+    <string name="submit_answer">Potvrdiť odpoveď</string>
+    <string name="select_answer_first">Najprv vyber odpoveď.</string>
+    <string name="quiz_result_format">Úspešnosť: %1$d%% | Body za kvíz: %2$d</string>
+
+    <string name="points_value">Aktuálne body: %1$d</string>
+    <string name="exchange_meetup">Vymeniť za stretnutie s archeológom</string>
+    <string name="exchange_print">Vymeniť za 3D print artefaktu</string>
+    <string name="exchange_meetup_done">Výmena simulovaná: stretnutie s archeológom.</string>
+    <string name="exchange_print_done">Výmena simulovaná: 3D print artefaktu.</string>
+    <string name="back_to_map">Späť na mapu</string>
+
+    <string name="channel_nearby_name">ARcho blízke lokality</string>
+    <string name="notification_title">Si blízko archeologickej lokality!</string>
+    <string name="notification_body">Otvor mapu a začni AR hľadanie artefaktov.</string>
+    <string name="ar_available_hint">AR je dostupné. Simuluj nájdenie artefaktu tlačidlom nižšie.</string>
+    <string name="ar_unavailable_hint">AR nie je dostupné na tomto zariadení. Môžeš pokračovať v simulovanom režime.</string>
+    <string name="ar_placeholder_surface">Sem príde AR náhľad kamery (na kompatibilnom zariadení).</string>
+    <string name="collect_artefact">Získať artefakt</string>
+</resources>

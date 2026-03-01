@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/mapFragment">
+
+    <fragment
+        android:id="@+id/mapFragment"
+        android:name="com.archo.go.ui.map.MapFragment"
+        android:label="Mapa">
+        <action
+            android:id="@+id/action_mapFragment_to_detailFragment"
+            app:destination="@id/detailFragment" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/detailFragment"
+        android:name="com.archo.go.ui.detail.DetailFragment"
+        android:label="Detail">
+        <action
+            android:id="@+id/action_detailFragment_to_arScannerFragment"
+            app:destination="@id/arScannerFragment" />
+        <action
+            android:id="@+id/action_detailFragment_to_inventoryFragment"
+            app:destination="@id/inventoryFragment" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/arScannerFragment"
+        android:name="com.archo.go.ui.ar.ARScannerFragment"
+        android:label="AR Scanner">
+        <action
+            android:id="@+id/action_arScannerFragment_to_inventoryFragment"
+            app:destination="@id/inventoryFragment" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/inventoryFragment"
+        android:name="com.archo.go.ui.inventory.InventoryFragment"
+        android:label="Inventár">
+        <action
+            android:id="@+id/action_inventoryFragment_to_quizFragment"
+            app:destination="@id/quizFragment" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/quizFragment"
+        android:name="com.archo.go.ui.quiz.QuizFragment"
+        android:label="Kvíz">
+        <action
+            android:id="@+id/action_quizFragment_to_rewardsFragment"
+            app:destination="@id/rewardsFragment" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/rewardsFragment"
+        android:name="com.archo.go.ui.rewards.RewardsFragment"
+        android:label="Odmeny">
+        <action
+            android:id="@+id/action_rewardsFragment_to_mapFragment"
+            app:destination="@id/mapFragment"
+            app:popUpTo="@id/mapFragment"
+            app:popUpToInclusive="true" />
+    </fragment>
+
+</navigation>
