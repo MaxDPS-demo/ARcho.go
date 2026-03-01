@@ -41,10 +41,6 @@ android {
 }
 
 
-configurations.all {
-    // Guard against stale references from older local caches/build scripts.
-    exclude(group = "com.gorisse.thomas.sceneform")
-}
 
 dependencies {
     implementation("androidx.core:core-ktx:1.13.1")
@@ -65,6 +61,4 @@ dependencies {
     implementation("androidx.work:work-runtime-ktx:2.9.1")
 
     implementation("com.google.ar:core:1.46.0")
-    // Sceneform UX (stable import path used in code: com.google.ar.sceneform.ux.*)
-    implementation("com.google.ar.sceneform.ux:sceneform-ux:1.17.1")
 }

@@ -29,4 +29,8 @@
     <string name="channel_nearby_name">ARcho blízke lokality</string>
     <string name="notification_title">Si blízko archeologickej lokality!</string>
     <string name="notification_body">Otvor mapu a začni AR hľadanie artefaktov.</string>
+    <string name="ar_available_hint">AR je dostupné. Simuluj nájdenie artefaktu tlačidlom nižšie.</string>
+    <string name="ar_unavailable_hint">AR nie je dostupné na tomto zariadení. Môžeš pokračovať v simulovanom režime.</string>
+    <string name="ar_placeholder_surface">Sem príde AR náhľad kamery (na kompatibilnom zariadení).</string>
+    <string name="collect_artefact">Získať artefakt</string>
 </resources>
